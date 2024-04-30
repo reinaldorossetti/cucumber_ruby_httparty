@@ -23,6 +23,7 @@ bundle install
 ```
 bundle exec cucumber
 bundle exec cucumber features/backend_tests.feature
+bundle exec cucumber --tags @backend
 ```
 Para visualizar o relatório gerado do allure report, segue o link abaixo:
 ```
