@@ -1,43 +1,173 @@
 {
   "type": "object",
-  "description": "The root schema comprises the entire JSON document.",
   "default": {},
   "required": [
-    "key",
-    "name",
-    "label"
+      "products",
+      "operatingDays",
+      "typeOfEstablishment",
+      "videos",
+      "dominios"
   ],
   "properties": {
-    "key": {
-      "$id": "#/properties/key",
-      "type": "string",
-      "title": "The key schema",
-      "description": "An explanation about the purpose of this instance.",
-      "default": "",
-      "examples": [
-        "REFEICAO|PADARIA"
-      ]
-    },
-    "name": {
-      "$id": "#/properties/name",
-      "type": "string",
-      "title": "The name schema",
-      "description": "An explanation about the purpose of this instance.",
-      "default": "",
-      "examples": [
-        "PADARIA_REFEICAO"
-      ]
-    },
-    "label": {
-      "$id": "#/properties/label",
-      "type": "string",
-      "title": "The label schema",
-      "description": "An explanation about the purpose of this instance.",
-      "default": "",
-      "examples": [
-        "Refeição - Padaria"
-      ]
-    }
-  },
-  "additionalProperties": false
+      "products": {
+          "type": "array",
+          "default": [],
+          "items": {
+              "type": "object",
+              "required": [
+                  "adquirirCartao",
+                  "percentualCartao",
+                  "id",
+                  "nome",
+                  "exibirRede",
+                  "produtoRefeicao",
+                  "produtoAlimentacao"
+              ],
+              "properties": {
+                  "adquirirCartao": {
+                      "type": "boolean"
+                  },
+                  "percentualCartao": {
+                      "type": "integer"
+                  },
+                  "id": {
+                      "type": "integer"
+                  },
+                  "nome": {
+                      "type": "string"
+                  },
+                  "exibirRede": {
+                      "type": "boolean"
+                  },
+                  "produtoRefeicao": {
+                      "type": "boolean"
+                  },
+                  "produtoAlimentacao": {
+                      "type": "boolean"
+                  }
+              }
+          }
+      },
+      "operatingDays": {
+          "type": "array",
+          "default": [],
+          "items": {
+              "type": "object",
+              "required": [
+                  "key",
+                  "name",
+                  "label"
+              ],
+              "properties": {
+                  "key": {
+                      "type": "integer"
+                  },
+                  "name": {
+                      "type": "string"
+                  },
+                  "label": {
+                      "type": "string"
+                  }
+              }
+          }
+      },
+      "typeOfEstablishment": {
+          "type": "array",
+          "default": [],
+          "items": {
+              "type": "object",
+              "required": [
+                  "key",
+                  "name",
+                  "label"
+              ],
+              "properties": {
+                  "key": {
+                      "type": "string"
+                  },
+                  "name": {
+                      "type": "string"
+                  },
+                  "label": {
+                      "type": "string"
+                  }
+              }
+          }
+      },
+      "videos": {
+          "type": "array",
+          "default": [],
+          "items": {
+              "type": "object",
+              "required": [
+                  "label",
+                  "key"
+              ],
+              "properties": {
+                  "label": {
+                      "type": "string"
+                  },
+                  "key": {
+                      "type": "string"
+                  }
+              }
+          }
+      },
+      "dominios": {
+          "type": "object",
+          "default": {},
+          "required": [
+              "TIPO_LOGRADOURO",
+              "SEXO"
+          ],
+          "properties": {
+              "TIPO_LOGRADOURO": {
+                  "type": "array",
+                  "default": [],
+                  "items": {
+                      "type": "object",
+                      "required": [
+                          "key",
+                          "name",
+                          "label"
+                      ],
+                      "properties": {
+                          "key": {
+                              "type": "integer"
+                          },
+                          "name": {
+                              "type": "string"
+                          },
+                          "label": {
+                              "type": "string"
+                          }
+                      }
+                  }
+              },
+              "SEXO": {
+                  "type": "array",
+                  "default": [],
+                  "items": {
+                      "type": "object",
+                      "required": [
+                          "key",
+                          "name",
+                          "label"
+                      ],
+                      "properties": {
+                          "key": {
+                              "type": "string"
+                          },
+                          "name": {
+                              "type": "string"
+                          },
+                          "label": {
+                              "type": "string"
+                          }
+                      }
+                  }
+              }
+          }
+      }
+  }
 }

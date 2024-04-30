@@ -22,7 +22,7 @@ end
 
 Entao('valido o json schema do estabelecimento') do
   expect(@get_clientes.code).to eq 200
-  expect(@establishment).to match_json_schema('establishment')
+  expect(@get_clientes.body).to match_json_schema('establishment')
 end
 
 Entao('valido os dados do primeiro estabelecimento') do
