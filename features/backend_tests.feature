@@ -1,6 +1,7 @@
-#language: pt
+# language: pt
+# encoding: utf-8
 
-@get
+@backend
 Funcionalidade: Prova VR
 
 @consulta

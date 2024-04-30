@@ -48,8 +48,3 @@ jobs:
           publish_branch: gh-pages  # default: gh-pages
           publish_dir: allure-report
           destination_dir: allure-report
-        
-      - uses: actions/upload-artifact@v4
-        with:
-          name: report-cucumber
-          path: report/report.html
