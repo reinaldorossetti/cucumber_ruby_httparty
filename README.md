@@ -6,7 +6,7 @@ A configuração (importe das gems) está dentro do **suport/env.rb** e a instâ
 
 **1 - Faça um clone no projeto no seu PC.**
 
-git clone https://github.com/reinaldorossetti/ruby_cucumber_httparty.git
+git clone https://github.com/reinaldorossetti/cucumber_ruby_httparty.git
 
 **2 - Passo de entre na pasta do projeto**
 ```
