@@ -4,6 +4,15 @@ A configuração (importe das gems) está dentro do **suport/env.rb** e a instâ
 
 # PASSO A PASSO
 
+**Pré-requisitos:**
+Instalação do Ruby com DevKit (versão instalada 3.0.7):
+Windows:  
+https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.0.7-1/rubyinstaller-devkit-3.0.7-1-x64.exe  
+Linux:  
+https://www.ruby-lang.org/en/news/2024/04/23/ruby-3-0-7-released/  
+
+** Configurar a variável de ambiente conforme o sistema operacional.
+
 **1 - Faça um clone no projeto no seu PC.**
 
 git clone https://github.com/reinaldorossetti/cucumber_ruby_httparty.git
@@ -21,7 +30,7 @@ bundle install
 **4- Passo rode o nosso projeto, abrar o terminal em tests e envie o comando abaixo:**
 
 ```
-bundle exec cucumber
+bundle exec cucumber --publish 
 bundle exec cucumber features/backend_tests.feature
 bundle exec cucumber --tags @backend
 ```
