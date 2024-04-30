@@ -10,7 +10,7 @@ git clone https://github.com/reinaldorossetti/ruby_cucumber_httparty.git
 
 **2 - Passo de entre na pasta do projeto**
 ```
-cd ruby_cucumber_httparty
+cd cucumber_ruby_httparty
 ```
 **3 - Passo instale as dependências**
 ```
@@ -22,11 +22,11 @@ bundle install
 
 ```
 bundle exec cucumber
-bundle exec cucumber features/specs/verbo_get.feature
+bundle exec cucumber features/backend_tests.feature
 ```
 Para visualizar o relatório gerado do allure report, segue o link abaixo:
 ```
-https://reinaldorossetti.github.io/ruby_cucumber_httparty/
+https://reinaldorossetti.github.io/cucumber_ruby_httparty/allure-report/
 ```
 Para adiciona compatibilidade com linux x86 e x64
 ```
