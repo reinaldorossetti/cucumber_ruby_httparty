@@ -9,6 +9,11 @@ Cenario: consultas no portal VR
   Quando seleciono um estabelecimento aleatoriamente
   Entao valido o json schema do estabelecimento
 
+@cenario_negativo
+Cenario: teste negativo acesso negado ao end point de comum
+  Dado que eu faça um GET no endpoint de comum no portal VR
+  Entao valido o acesso negado ao end point de comum
+
 @cenario01
 Cenario: bananas e tomates 
   Dado a string de entrada "bananas, tomates # e ventiladores"

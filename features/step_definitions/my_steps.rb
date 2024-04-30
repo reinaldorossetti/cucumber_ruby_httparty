@@ -6,6 +6,11 @@ Dado('que eu faça um GET no endpoint de consulta no portal VR') do
   @get_clientes = Http.get '/api-web/comum/enumerations/VRPAT'
 end
 
+Dado('que eu faça um GET no endpoint de comum no portal VR') do
+  Http.headers 'cookie' => $COOKIES
+  @get_body = Http.get '/api-web/comum/'
+end
+
 Quando('seleciono um estabelecimento aleatoriamente') do
   p @establishment = @get_clientes.parsed_response['typeOfEstablishment'].sample
   p @establishment["name"]
@@ -14,6 +19,11 @@ end
 Entao('valido o json schema do estabelecimento') do
   expect(@get_clientes.code).to eq 200
   expect(@establishment).to match_json_schema('establishment')
+end
+
+Entao('valido o acesso negado ao end point de comum') do
+  expect(@get_body.code).to eq 401
+  expect(@get_body.body).to eq("\"ACCESS_DENIED\"")
 end
 
 Dado("a string de entrada {string}") do |string|
