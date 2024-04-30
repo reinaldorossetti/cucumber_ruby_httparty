@@ -18,9 +18,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 18
       - name: Install operating system dependencies
         run: npm install -g allure-commandline --save-dev
       - name: Set up Ruby
@@ -35,7 +35,7 @@ jobs:
         run: |
              gem install bundler
              bundler install
-             bundle exec cucumber
+             bundle exec cucumber --format html --out=report/index.html
           
       - name: Test marketplace action
         uses: simple-elf/allure-report-action@master
@@ -54,3 +54,9 @@ jobs:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
+        
+      - name: Archive tests results
+        uses: actions/upload-artifact@v4
+        with:
+          name: report-cucumber
+          path: report/index.html
