@@ -1,11 +1,11 @@
-# Projeto usando o Httparty e Cucumber.
+# Projeto usando o Httparty e Cucumber.  
 
 A configuração (importe das gems) está dentro do **suport/env.rb** e a instância do Httparty está dentro do módulo Http, com isso eu elimino muito código desnecessário.
 
-# PASSO A PASSO
+# PASSO A PASSO  
 
-**Pré-requisitos:**
-Instalação do Ruby com DevKit (versão instalada 3.0.7):
+**Pré-requisitos:**  
+Instalação do Ruby com DevKit (versão instalada 3.0.7):  
 Windows:  
 https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.0.7-1/rubyinstaller-devkit-3.0.7-1-x64.exe  
 Linux:  
