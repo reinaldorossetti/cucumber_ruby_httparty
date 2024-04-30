@@ -35,7 +35,7 @@ jobs:
         run: |
              gem install bundler
              bundler install
-             bundle exec cucumber --format html --out=report/index.html
+             bundle exec cucumber --format html --out=./report/index.html
           
       - name: Test marketplace action
         uses: simple-elf/allure-report-action@master
