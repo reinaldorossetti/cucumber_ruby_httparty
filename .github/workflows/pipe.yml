@@ -17,7 +17,7 @@ jobs:
         ruby: [3.0.0]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 18
@@ -35,8 +35,8 @@ jobs:
         run: |
              gem install bundler
              bundler install
-             bundle exec cucumber --format html --out=./report/index.html
-          
+             bundle exec cucumber --format html --out=report/report.html
+
       - name: Test marketplace action
         uses: simple-elf/allure-report-action@master
         if: always()
