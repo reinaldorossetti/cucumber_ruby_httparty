@@ -42,7 +42,7 @@ Dado("a string de entrada {string}") do |string|
 end
 
 Dado('os marcadores:') do |table|
-  # Dado a string, faz um for via map de caracteres, e inclue até encontrar o valor de pausa.
+  # Dado a string, faz um for each de caracteres, e inclue até encontrar o valor de pausa.
   # a regra do include? é usando o array caracteres_a_remover.
   @caracteres_a_remover = table.raw.flatten
   @new_text = ""
