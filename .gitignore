@@ -14,6 +14,7 @@ Gemfile.lock
 .idea/
 *.xml
 .idea/workspace.xml
+allure-report/
 # Used by dotenv library to load environment variables.
 # .env
 

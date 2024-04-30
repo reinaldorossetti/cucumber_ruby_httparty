@@ -16,9 +16,20 @@ Quando('seleciono um estabelecimento aleatoriamente') do
   p @establishment["name"]
 end
 
+Quando('seleciono o primeiro estabelecimento') do
+  p @establishment = @get_clientes.parsed_response['typeOfEstablishment'].first
+end
+
 Entao('valido o json schema do estabelecimento') do
   expect(@get_clientes.code).to eq 200
   expect(@establishment).to match_json_schema('establishment')
+end
+
+Entao('valido os dados do primeiro estabelecimento') do
+  expect(@get_clientes.code).to eq 200
+  expect(@establishment['key']).to eq("REFEICAO|PIZZARIA")
+  expect(@establishment['name']).to eq("PIZZARIA")
+  expect(@establishment['label']).to eq("Refeição - Pizzaria")
 end
 
 Entao('valido o acesso negado ao end point de comum') do
