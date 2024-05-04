@@ -1,6 +1,6 @@
 # Projeto usando o Httparty e Cucumber.  
 
-A configuração (importe das gems) está dentro do **suport/env.rb** e a instância do Httparty está dentro do módulo Http, com isso eu elimino muito código desnecessário.
+A configuração (importe das gems) está dentro do **suport/env.rb** e a instância do Httparty está dentro do módulo Http, e depois adicionando no cucumber com o World(Http), assim posso mudar a base_uri para chamar diversos end point/micro serviços.
 
 # PASSO A PASSO  
 
