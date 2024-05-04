@@ -1,6 +1,13 @@
 ﻿# language: pt
 # encoding: utf-8
 
+Before('@ExecuteBefore') do
+  # Configurando o Json Schema.
+  schema_directory = "#{Dir.pwd}/features/specifications/estabelecimento/resources/"
+  # pego o camino do json e schema e chamo no meu teste o nome do arquivo.
+  JsonMatchers.schema_root = schema_directory
+end
+
 Dado('que eu faça um GET no endpoint de consulta no portal VR') do
   Http.headers 'cookie' => $COOKIES
   @get_clientes = Http.get '/api-web/comum/enumerations/VRPAT'
@@ -35,28 +42,4 @@ end
 Entao('valido o acesso negado ao end point de comum') do
   expect(@get_body.code).to eq 401
   expect(@get_body.body).to eq("\"ACCESS_DENIED\"")
-end
-
-Dado("a string de entrada {string}") do |string|
-  @text = string
-end
-
-Dado('os marcadores:') do |table|
-  # Dado a string, faz um for each de caracteres, e inclue até encontrar o valor de pausa.
-  # a regra do include? é usando o array caracteres_a_remover.
-  # for each reduzido ex: @text.chars.each { |char| @caracteres_a_remover.include?(char) ? break : @new_text << char }
-  @caracteres_a_remover = table.raw.flatten
-  @new_text = ""
-  @text.chars.each { |char|
-    if @caracteres_a_remover.include?(char)
-      break
-    else
-      @new_text << char
-    end
-  }
-  @new_text = @new_text.strip
-end
-
-Então("a saída esperada é: {string}") do |string|
-  expect(@new_text).to eq(string)
 end

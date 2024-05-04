@@ -46,6 +46,30 @@ Rodar local com report do cucumber.
 ```
 bundle exec cucumber --format html --out=report/report.html
 ```
+
+### Estrutura de diretórios
+Estou seguindo o padrão official do cucumber, com a pasta principal features e a de configurações support.
+Optei para uma configuração descentralizada, cada squad conseguiria mexer de forma isolada na sua estrutura.
+
+```
+cucumber_ruby_httparty/  
+ ├─ .github                     - Pasta padrão do Git Actions, contém a pipeline de testes.
+ ├─ features/                   - Pasta pricipal do Cucumber.
+ |   ├─ specifications /
+ |      ├─ nome_da_features /   - Pasta com os nomes das funcionalidades que seram automatizadas.
+ |          ├─ resources        - Arquivos diversos que fazem parte dos testes.
+ |          ├─ step_definitions - Pasta que contém o passo a passo das chamadas dos testes.
+ |          └─ *_tests.feature  - Arquivo .feature que contém a descrição dos testes.  
+ |   └─ support/                - Arquivos Globais de Configuração ou Setup dos testes usando o framework do Cucumber.  
+ |       ├─ resources           - Arquivos de Recursos Globais. 
+ |       ├─ httparty_config.rb  - Adicionado um modulo pra configurar o httparty, assim posso chamar diversos micro-serviços.
+ |       └─ env.rb              - Arquivo de Configuração do Cucumber.  
+ ├─ .gitignore 
+ ├─ cucumber.yml                - Arquivo Configuração da Execução do Cucumber.
+ ├─ Gemfile                     - Bibliotecas que foram usadas no projeto.
+ └─ README.md                   - Documentação basica de configuração e execução do Projeto.
+```
+
 Referências:  
 https://github.com/ruby-json-schema/json-schema/tree/master  
 https://github.com/jnunemaker/httparty  
