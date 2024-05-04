@@ -1,1 +1,1 @@
-{"total":1,"items":[{"uid":"f73488c64e7a27c4ca31e59368fc8681","name":"Prova VR","statistic":{"failed":0,"broken":0,"skipped":0,"passed":6,"unknown":0,"total":6}}]}
+{"total":2,"items":[{"uid":"6bfb83da2b1666c2275cf320b20cebf7","name":"Feature de Estabelecimento.","statistic":{"failed":0,"broken":0,"skipped":0,"passed":3,"unknown":0,"total":3}},{"uid":"bac23b8d8b1bd9b161d9762fe72e80bb","name":"Feature de Filtro por Marcador.","statistic":{"failed":0,"broken":0,"skipped":0,"passed":3,"unknown":0,"total":3}}]}
