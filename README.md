@@ -58,8 +58,8 @@ cucumber_ruby_httparty/
  |   ├─ specifications /
  |      ├─ nome_da_feature /    - Pasta com o nome da funcionalidade que será automatizada.
  |          ├─ resources        - Arquivos diversos que fazem parte dos testes.
- |          ├─ step_definitions - Pasta que contém o passo a passo das chamadas dos testes.
- |          └─ *_tests.feature  - Arquivo .feature que contém a descrição dos testes.  
+ |          ├─ step_definitions - Pasta que contém o passo a passo das chamadas dos testes (padronizado _steps.rb).
+ |          └─ *_tests.feature  - Arquivo .feature que contém a descrição dos testes (padronizado _tests.feature).  
  |   └─ support/                - Arquivos Globais de Configuração ou Setup dos testes usando o framework do Cucumber.  
  |       ├─ resources           - Arquivos de Recursos Globais. 
  |       ├─ httparty_config.rb  - Adicionado um modulo pra configurar o httparty, assim posso chamar diversos micro-serviços.
