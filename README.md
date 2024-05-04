@@ -56,7 +56,7 @@ cucumber_ruby_httparty/
  ├─ .github                     - Pasta padrão do Git Actions, contém a pipeline de testes.
  ├─ features/                   - Pasta pricipal do Cucumber.
  |   ├─ specifications /
- |      ├─ nome_da_features /   - Pasta com os nomes das funcionalidades que seram automatizadas.
+ |      ├─ nome_da_feature /    - Pasta com o nome da funcionalidade que será automatizada.
  |          ├─ resources        - Arquivos diversos que fazem parte dos testes.
  |          ├─ step_definitions - Pasta que contém o passo a passo das chamadas dos testes.
  |          └─ *_tests.feature  - Arquivo .feature que contém a descrição dos testes.  
